@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Snow Example</title>
+  <style>
+    #snowfield {
+      display: inline-block;
+      width: 400px;
+      height: 270px;
+    }
+
+    #snowfield canvas {
+      position: absolute;
+      left: 72px;
+      top: -54px;
+      -moz-transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+    }
+  </style>
+</head>
+<body>
+  <div id="snowfield">
+    <img src="images/snowman.jpg"/>
+  </div>
+  <div>
+    <button id="start-btn">Start</button>
+    <button id="pause-btn">Pause</button>
+  </div>
+  <script type="text/javascript" src="../lib/starfield.js"></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      var fieldEl  = document.getElementById('snowfield'),
+          startBtn = document.getElementById('start-btn'),
+          pauseBtn = document.getElementById('pause-btn'),
+          snowfield;
+
+      snowfield = Starfield.create(fieldEl, {
+        bgColor:   'rgba(0, 0, 0, 0.0)',
+        numStars:   600,
+        width:      270,
+        height:     390,
+        speedMin:   1,
+        speedMax:   4,
+        starColors: ['#FFF', '#EEE', '#DDD']
+      });
+
+      startBtn.addEventListener('click', function(e) {
+        snowfield.start();
+      });
+
+      pauseBtn.addEventListener('click', function(e) {
+        snowfield.pause();
+      });
+    };
+  </script>
+</body>
+</html>
+
