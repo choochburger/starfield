@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Starfield Example</title>
+</head>
+<body>
+  <div id="starfield"></div>
+  <script type="text/javascript" src="../lib/starfield.js"></script>
+  <script type="text/javascript">
+    window.onload = function() {
+
+      var fieldEl = document.getElementById('starfield'),
+          starfield;
+
+      starfield = Starfield.create(fieldEl, {
+        numStars: 500
+      });
+
+      starfield.start();
+
+      // starField.pause();
+      // starField.destroy();
+
+    };
+  </script>
+</body>
+</html>
