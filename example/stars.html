@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Starfield Example</title>
+  <style>
+    #starfield {
+      width: 640px;
+      height: 480px;
+    }
+  </style>
+</head>
+<body>
+  <div id="starfield"></div>
+  <button id="start-btn">Start</button>
+  <button id="pause-btn">Pause</button>
+  <script type="text/javascript" src="../lib/starfield.js"></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      var fieldEl  = document.getElementById('starfield'),
+          startBtn = document.getElementById('start-btn'),
+          pauseBtn = document.getElementById('pause-btn'),
+          starfield;
+
+      starfield = Starfield.create(fieldEl, {
+        numStars: 25
+      });
+
+      startBtn.addEventListener('click', function(e) {
+        starfield.start();
+      });
+
+      pauseBtn.addEventListener('click', function(e) {
+        starfield.pause();
+      });
+    };
+  </script>
+</body>
+</html>
