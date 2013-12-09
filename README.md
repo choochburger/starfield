@@ -1,5 +1,7 @@
 ## Simple Animated Canvas Starfield
 
+![image](https://www.codeship.io/projects/721b9f00-42a9-0131-0f59-5e9a1e4ded26/status)
+
 ### Usage:
 
 `var starfield = Starfield.create(element, options)`
