@@ -38,3 +38,12 @@ Starfield.create(fieldEl, {
 });
 
 ```
+
+### API
+
+```js
+var starfield = Starfield.create(element, options);
+
+starfield.start() // Star animation
+starfield.pause() // Pause animation
+```
